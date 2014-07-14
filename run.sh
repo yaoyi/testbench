@@ -1,3 +1,2 @@
 #!/bin/sh
-
-bundle exec unicorn -p 9000
+rackup -s Puma -p 9000

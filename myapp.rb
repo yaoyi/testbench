@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'mongoid'
 require 'json'
-
+configure { set :server, :puma }
 # initialize log
 require 'logger'
 Dir.mkdir('log') unless File.exist?('log')
