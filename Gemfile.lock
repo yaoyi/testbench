@@ -20,6 +20,9 @@ GEM
     capistrano-bundler (1.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-thin (1.0.0)
+      capistrano (~> 3.0)
+      thin (~> 1.6)
     coderay (1.1.0)
     colorize (0.7.3)
     connection_pool (2.0.0)
@@ -61,9 +64,9 @@ GEM
       colorize
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    thin (1.5.1)
+    thin (1.6.2)
       daemons (>= 1.0.9)
-      eventmachine (>= 0.12.6)
+      eventmachine (>= 1.0.0)
       rack (>= 1.0.0)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -77,8 +80,9 @@ DEPENDENCIES
   bson_ext
   capistrano (~> 3.1)
   capistrano-bundler (~> 1.1.2)
+  capistrano-thin
   dalli
   mongoid
   pry
   sinatra
-  thin
+  thin (~> 1.6)
