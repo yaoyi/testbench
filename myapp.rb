@@ -1,5 +1,5 @@
 require "sinatra"
 
 get '/' do
-    'Hello, nginx and unicorn!'
+    'Hello, Sinatra!'
 end
