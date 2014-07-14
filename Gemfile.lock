@@ -20,8 +20,8 @@ GEM
     capistrano-bundler (1.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano-unicorn (0.1.10)
-      capistrano
+    capistrano3-unicorn (0.1.1)
+      capistrano (>= 3.1.0)
     coderay (1.1.0)
     colorize (0.7.3)
     connection_pool (2.0.0)
@@ -78,7 +78,7 @@ DEPENDENCIES
   bson_ext
   capistrano (~> 3.1)
   capistrano-bundler (~> 1.1.2)
-  capistrano-unicorn
+  capistrano3-unicorn
   mongoid
   pry
   sinatra
