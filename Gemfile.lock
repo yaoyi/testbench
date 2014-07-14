@@ -20,16 +20,12 @@ GEM
     capistrano-bundler (1.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano-thin (1.0.0)
-      capistrano (~> 3.0)
-      thin (~> 1.6)
     coderay (1.1.0)
     colorize (0.7.3)
     connection_pool (2.0.0)
-    daemons (1.1.9)
-    eventmachine (1.0.3)
     i18n (0.6.9)
     json (1.8.1)
+    kgio (2.9.2)
     method_source (0.8.2)
     minitest (5.4.0)
     mongoid (4.0.0)
@@ -53,6 +49,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    raindrops (0.13.0)
     rake (10.3.2)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -63,14 +60,14 @@ GEM
       colorize
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    thin (1.6.2)
-      daemons (>= 1.0.9)
-      eventmachine (>= 1.0.0)
-      rack (>= 1.0.0)
     thread_safe (0.3.4)
     tilt (1.4.1)
     tzinfo (1.2.1)
       thread_safe (~> 0.1)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -79,8 +76,7 @@ DEPENDENCIES
   bson_ext
   capistrano (~> 3.1)
   capistrano-bundler (~> 1.1.2)
-  capistrano-thin
   mongoid
   pry
   sinatra
-  thin (~> 1.6)
+  unicorn
