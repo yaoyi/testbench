@@ -6,6 +6,7 @@ set :repo_url, 'https://github.com/yaoyi/testbench.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+set :branch, ENV["rev"] || 'master'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/u/apps/intercity_sample_app'
