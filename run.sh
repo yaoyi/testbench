@@ -1,3 +1,3 @@
 #!/bin/sh
 
-bundle exec rainbows -c config/rainbows.rb -p 9000
+bundle exec rainbows -p 9000
