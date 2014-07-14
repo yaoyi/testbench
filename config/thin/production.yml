@@ -14,4 +14,4 @@ threaded: true
 no-epoll: true
 daemonize: true
 socket: tmp/sockets/thin.sock
-chdir: /u/apps/intercity_sample_app/current/public
+chdir: /u/apps/intercity_sample_app/current/
