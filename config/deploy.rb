@@ -6,6 +6,7 @@ set :repo_url, 'https://github.com/yaoyi/testbench.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+set :branch, ENV["rev"] || 'master'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/u/apps/intercity_sample_app'
@@ -23,7 +24,7 @@ set :ssh_options, {
 set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/thin/production.yml}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
