@@ -47,3 +47,8 @@ namespace :deploy do
   after :publishing, :restart
 
 end
+
+after "deploy:start",          "puma:start"
+after "deploy:stop",           "puma:stop"
+after "deploy:restart",        "puma:restart"
+after "deploy:create_symlink", "puma:after_symlink"
