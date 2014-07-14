@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 set :application, 'intercity_sample_app'
-set :repo_url, 'git@github.com:yaoyi/testbench.git'
+set :repo_url, 'https://github.com/yaoyi/testbench.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -15,7 +15,6 @@ set :deploy_to, '/u/apps/intercity_sample_app'
 
 # Use agent forwarding for SSH so you can deploy with the SSH key on your workstation.
 set :ssh_options, {
-  port: 2222,
   forward_agent: true,
   keys: ['~/.vagrant.d/insecure_private_key']
 }
