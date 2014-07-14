@@ -4,8 +4,7 @@ gem 'capistrano', '~> 3.1'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'mongoid'
 gem 'bson_ext'
-gem 'dalli'
-gem 'thin'
+gem 'rainbows'
 
 group :development do
   gem 'pry'

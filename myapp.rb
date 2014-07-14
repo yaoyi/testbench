@@ -1,8 +1,6 @@
 require 'sinatra'
 require 'mongoid'
 require 'json'
-require 'dalli'
-set :cache, Dalli::Client.new
 
 # initialize log
 require 'logger'
@@ -26,10 +24,7 @@ class Qrcode
     field :expired_at, type: DateTime
 end
 get '/:id' do
-	if settings.cache.get(params[:id]).nil?
-	  @qrcode = Qrcode.find params[:id]
-	  settings.cache.set(params[:id], @qrcode)
-	end    
+  @qrcode = Qrcode.find params[:id]
 	@qrcode.to_json
 end
 

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-bundle exec thin start -p 9000
+bundle exec rainbows -c config/rainbows.rb -p 9000
