@@ -1,4 +1,6 @@
+require 'rubygems'
 require 'sinatra'
+require 'unicorn'
 require 'mongoid'
 require 'json'
 

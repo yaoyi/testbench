@@ -1,3 +1,4 @@
+rails_env = ENV['RAILS_ENV'] || 'production'
 # set path to app that will be used to configure unicorn,
 # note the trailing slash in this example
 @dir = "/u/apps/intercity_sample_app/current/"
