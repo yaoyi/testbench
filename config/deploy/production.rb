@@ -8,6 +8,11 @@ role :app, %w{192.168.33.10}
 role :web, %w{192.168.33.10}
 role :db,  %w{192.168.33.10}
 
+set :rails_env,        "production"
+set :unicorn_env,      "production"
+set :unicorn_rack_env, "production"
+set :app_env,          "production"
+
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server
