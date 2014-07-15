@@ -51,7 +51,7 @@ end
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{current_path}/tmp/pids/puma.state"
 set :puma_pid, "#{current_path}/tmp/pids/puma.pid"
-set :puma_bind, "unix://#{current_path}/tmp/sockets/puma.sock"
+set :puma_bind, [ "unix://#{current_path}/tmp/sockets/puma0.sock", "unix://#{current_path}/tmp/sockets/puma1.sock", "unix://#{current_path}/tmp/sockets/puma2.sock" ]
 # set :puma_conf, "#{current_path}/config/puma.rb"
 set :puma_access_log, "#{current_path}/log/puma_error.log"
 set :puma_error_log, "#{current_path}/log/puma_access.log"
