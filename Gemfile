@@ -5,7 +5,7 @@ gem 'capistrano-bundler', '~> 1.1.2'
 gem 'mongoid'
 gem 'bson_ext'
 gem "puma"
-gem 'capistrano-puma', require: false
+gem 'capistrano3-puma', github: "seuros/capistrano-puma"
 
 group :development do
   gem 'pry'
