@@ -16,3 +16,9 @@ production:
       database: testbench_production
       hosts:
         - localhost:27017
+deployment:
+  sessions:
+    default:
+      database: testbench_production
+      hosts:
+        - localhost:27017
