@@ -1,7 +1,14 @@
 worker_processes 3
+#Rainbows! do
+#  use :ThreadPool
+#  # use :ThreadSpawn
+#  # worker_connections 10
+#  worker_connections 1
+#end
 timeout 30
 
 preload_app true
+
 
 before_exec do |server|
   ENV["BUNDLE_GEMFILE"] = "../Gemfile"
