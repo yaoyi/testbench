@@ -47,7 +47,6 @@ namespace :deploy do
 
 end
 
-
 set :nginx_server_name, "192.168.33.10"
 set :rainbows_user, "vagrant"
 set :rainbows_workers, 3
