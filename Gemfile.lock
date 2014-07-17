@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/viclim/capistrano-nginx-rainbows.git
+  revision: 987716fb2aec71b83d968aa7a7c35d34af818239
+  specs:
+    capistrano-nginx-rainbows (0.0.1)
+      capistrano (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -80,6 +87,7 @@ DEPENDENCIES
   bson_ext
   capistrano (~> 3.1)
   capistrano-bundler (~> 1.1.2)
+  capistrano-nginx-rainbows!
   mongoid
   pry
   rainbows

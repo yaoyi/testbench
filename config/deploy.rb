@@ -46,3 +46,9 @@ namespace :deploy do
   after :publishing, :restart
 
 end
+
+
+set :nginx_server_name, "192.168.33.10"
+set :rainbows_user, "vagrant"
+set :rainbows_workers, 3
+set :rainbows_service_name, "rainbows"

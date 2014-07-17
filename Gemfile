@@ -5,6 +5,7 @@ gem 'capistrano-bundler', '~> 1.1.2'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'rainbows'
+gem 'capistrano-nginx-rainbows', github: "viclim/capistrano-nginx-rainbows"
 
 group :development do
   gem 'pry'
