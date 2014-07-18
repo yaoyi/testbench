@@ -13,6 +13,6 @@ test:
 production:
   sessions:
     default:
-      database: testbench_production
+      database: intercity_sample_app_production
       hosts:
         - localhost:27017
