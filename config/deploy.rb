@@ -1,22 +1,21 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :application, 'intercity_sample_app'
+set :application, 'rainbows-sinatra-mongo'
 set :repo_url, 'https://github.com/yaoyi/testbench.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-set :branch, ENV['rev'] || 'master'
+set :branch, 'rainbows-sinatra-mongo'
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/u/apps/intercity_sample_app'
+set :deploy_to, '/u/apps/rainbows-sinatra-mongo'
 
 # Default value for :scm is :git
 # set :scm, :git
 
 # Use agent forwarding for SSH so you can deploy with the SSH key on your workstation.
 set :ssh_options, {
-  forward_agent: true,
-  keys: ['~/.vagrant.d/insecure_private_key']
+  forward_agent: true
 }
 
 # Default value for :pty is false
@@ -47,8 +46,4 @@ namespace :deploy do
 
 end
 
-set :nginx_server_name, "192.168.33.10"
-set :rainbows_user, "vagrant"
-set :rainbows_workers, 3
-set :rainbows_service_name, "rainbows"
-set :nginx_config_name, "#{fetch(:application)}.conf"
+# set :nginx_server_name, "192.168.33.10"
