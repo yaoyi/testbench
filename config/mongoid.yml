@@ -10,7 +10,7 @@ test:
       database: testbench_test
       hosts:
         - localhost:27017
-test:
+staging:
   sessions:
     default:
       database: testbench_staging
