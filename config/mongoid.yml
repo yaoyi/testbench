@@ -16,6 +16,12 @@ staging:
       database: testbench_staging
       hosts:
         - localhost:27017
+deployment:
+  sessions:
+    default:
+      database: testbench_staging
+      hosts:
+        - localhost:27017
 production:
   sessions:
     default:
