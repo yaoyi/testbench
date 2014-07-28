@@ -46,4 +46,7 @@ namespace :deploy do
 
 end
 
+before 'rainbows:restart', 'rainbows:setup_app_config'
+before 'rainbows:restart', 'rainbows:setup_initializer'
+
 # set :nginx_server_name, "192.168.33.10"
