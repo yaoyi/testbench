@@ -22,7 +22,7 @@ set :rainbows_workers, 3
 set :rainbows_service_name, "rainbows"
 set :nginx_config_name, "#{fetch(:application)}.conf"
 
-set :rails_env, "staging"
+set :rainbows_env, "staging"
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
