@@ -4,9 +4,9 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-role :app, %w{deploy@rainbow-sinatra-mongo.testbench.staging-1.foodspy.io}
-role :web, %w{deploy@rainbow-sinatra-mongo.testbench.staging-1.foodspy.io}
-role :db,  %w{deploy@rainbow-sinatra-mongo.testbench.staging-1.foodspy.io}
+role :app, %w{deploy@rainbows-sinatra-mongo.testbench.staging-1.foodspy.io}
+role :web, %w{deploy@rainbows-sinatra-mongo.testbench.staging-1.foodspy.io}
+role :db,  %w{deploy@rainbows-sinatra-mongo.testbench.staging-1.foodspy.io}
 
 # Extended Server Syntax
 # ======================
@@ -14,7 +14,7 @@ role :db,  %w{deploy@rainbow-sinatra-mongo.testbench.staging-1.foodspy.io}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server 'rainbow-sinatra-mongo.testbench.staging-1.foodspy.io', user: 'deploy', roles: %w{web app db}, my_property: :my_value
+server 'rainbows-sinatra-mongo.testbench.staging-1.foodspy.io', user: 'deploy', roles: %w{web app db}, my_property: :my_value
 
 
 set :rainbows_user, "deploy"
