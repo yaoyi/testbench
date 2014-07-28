@@ -42,3 +42,18 @@ set :ssh_options, {
 #     # password: 'please use keys'
 #   }
 # setting per server overrides global ssh_options
+
+set :puma_rackup, -> { File.join(current_path, 'config.ru') }
+set :puma_state, "#{current_path}/tmp/pids/puma.state"
+set :puma_pid, "#{current_path}/tmp/pids/puma.pid"
+set :puma_bind, [ "unix://#{current_path}/tmp/sockets/puma0.sock", "unix://#{current_path}/tmp/sockets/puma1.sock", "unix://#{current_path}/tmp/sockets/puma2.sock" ]
+# set :puma_conf, "#{current_path}/config/puma.rb"
+set :puma_access_log, "#{current_path}/log/puma_error.log"
+set :puma_error_log, "#{current_path}/log/puma_access.log"
+set :puma_role, :app
+set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
+set :puma_threads, [8, 32]
+set :puma_workers, 3
+set :puma_worker_timeout, nil
+set :puma_init_active_record, false
+set :puma_preload_app, true
