@@ -46,3 +46,6 @@ namespace :deploy do
   after :publishing, :restart
 
 end
+
+before 'puma:restart', 'puma:config'
+before 'puma:phased-restart', 'puma:config'
