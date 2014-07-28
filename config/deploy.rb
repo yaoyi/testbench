@@ -1,23 +1,22 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :application, 'intercity_sample_app'
+set :application, 'puma-sinatra-mongo'
 set :repo_url, 'https://github.com/yaoyi/testbench.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-set :branch, ENV["rev"] || 'master'
+set :branch, 'puma-sinatra-mongo'
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/u/apps/intercity_sample_app'
+set :deploy_to, '/u/apps/puma-sinatra-mongo'
 
 # Default value for :scm is :git
 # set :scm, :git
 
 # Use agent forwarding for SSH so you can deploy with the SSH key on your workstation.
 set :ssh_options, {
-  forward_agent: true,
-  keys: ['~/.vagrant.d/insecure_private_key']
+  forward_agent: true
 }
 
 # Default value for :pty is false

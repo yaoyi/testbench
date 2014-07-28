@@ -10,6 +10,12 @@ test:
       database: testbench_test
       hosts:
         - localhost:27017
+test:
+  sessions:
+    default:
+      database: testbench_staging
+      hosts:
+        - localhost:27017
 production:
   sessions:
     default:
