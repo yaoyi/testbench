@@ -1,7 +1,7 @@
 rails_env = ENV['RAILS_ENV'] || 'production'
 # set path to app that will be used to configure unicorn,
 # note the trailing slash in this example
-@dir = "/u/apps/intercity_sample_app/current/"
+@dir = "/u/apps/unicorn-sinatra-mongo/current/"
 
 worker_processes 3
 working_directory @dir
@@ -22,7 +22,7 @@ stdout_path "#{@dir}log/unicorn.stdout.log"
 preload_app true
 
 before_exec do |server|
-  ENV["BUNDLE_GEMFILE"] = "/u/apps/intercity_sample_app/current/Gemfile"
+  ENV["BUNDLE_GEMFILE"] = "/u/apps/unicorn-sinatra-mongo/current/Gemfile"
 end
 
 before_fork do |server, worker|
